@@ -1,4 +1,4 @@
-import { NavLink, useNavigation } from "react-router";
+import { Link, NavLink, useNavigation } from "react-router";
 import type { Route } from "./+types/home";
 import { ROUTES } from "~/constants/routes";
 
@@ -10,15 +10,15 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  console.log;
 
   return (
     <div>
       <p>Home</p>
 
-      <NavLink to={ROUTES.LOGIN}>
-        {({ isPending }) => <span>Home link {isPending && "Loading"}</span>}
-      </NavLink>
+      <Link to={ROUTES.LOGIN}>
+      go to login
+        {/* {({ isPending }) => <span>go to login{isPending && "Loading"}</span>} */}
+      </Link>
     </div>
   );
 }

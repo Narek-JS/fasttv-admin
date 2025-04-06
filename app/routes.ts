@@ -10,4 +10,4 @@ export default [
   route("register", "pages/auth/register.tsx"),
 
   layout("pages/auth/layout.tsx", [route("login", "pages/auth/login.tsx", {})]),
-] satisfies RouteConfig;
+] satisfies RouteConfig; 

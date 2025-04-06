@@ -12,6 +12,7 @@
     "@react-router/node": "^7.4.1",
     "@react-router/serve": "^7.4.1",
     "isbot": "^5.1.17",
+    "lodash": "^4.17.21",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@react-router/dev": "^7.4.1",
     "@tailwindcss/vite": "^4.0.0",
+    "@types/lodash": "^4.17.16",
     "@types/node": "^20",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",

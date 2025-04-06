@@ -5,6 +5,7 @@ import {
   Outlet,
   Links,
   Meta,
+  useNavigation,
 } from "react-router";
 import { Sidebar } from "./components/Sidebar";
 import { Header } from "./components/Header";
@@ -45,21 +46,23 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const navigation = useNavigation();
+
+  const isLoading = navigation.state === "loading";
+
+  console.log("isLoading --> ", isLoading);
+
   return (
     <div className="flex h-screen">
       <Sidebar />
       <div className="flex flex-col flex-1">
         <Header />
         <main className="p-4 flex-1 overflow-auto">
-          <Outlet />
+        {isLoading ? "Loading..." : <Outlet />}
         </main>
       </div>
     </div>
   );
-}
-
-export function HydrateFallback() {
-  return <div>Loading...</div>;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
