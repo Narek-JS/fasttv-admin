@@ -3,5 +3,3 @@ const Header = () => {
 };
 
 export { Header };
-
-import { useEffect, useState } from "react";
